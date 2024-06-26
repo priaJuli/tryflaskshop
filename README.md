@@ -1,5 +1,6 @@
 # Flask Shop - An Amazing Project
 
+Source original project [Flaskshop]{https://github.com/hjlarry/flask-shop}
 
 ## Introduction
 This project is a front page copy of [saleor](https://github.com/mirumee/saleor) old version, but written with flask.
