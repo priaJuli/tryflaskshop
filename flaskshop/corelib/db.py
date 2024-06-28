@@ -2,12 +2,12 @@ import copy
 import json
 from datetime import datetime
 
-from redis import Redis
+import redis
 
 from flaskshop.corelib.local_cache import lc
 from flaskshop.settings import Config
 
-rdb = Redis.from_url(Config.REDIS_URL)
+rdb = redis.Redis.from_url(Config.REDIS_URL)
 
 if not Config.USE_REDIS:
 
