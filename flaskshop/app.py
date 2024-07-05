@@ -25,7 +25,7 @@ from flaskshop.utils import jinja_global_varibles, log_slow_queries
 def create_app(config_object=Config):
     app = Flask(__name__.split(".")[0])
     app.config.from_object(config_object)
-    app.pluggy = manager.FlaskshopPluginManager("flaskshop")
+    app.pluggy = manager.FlaskshopPluginManager("flaskshop", name="flaskshop")
     register_extensions(app)
     load_plugins(app)
     register_blueprints(app)
