@@ -18,7 +18,7 @@ class FlaskshopPluginManager(pluggy.PluginManager):
         """Load modules from querying the specified setuptools entrypoint name.
         Return the number of loaded plugins."""
         logger.info(f"Loading plugins under entrypoint {group}")
-        for ep in entry_points().select(group=group):
+        for ep in entry_points(group=group):
             if self.get_plugin(ep.name) or self.is_blocked(ep.name):
                 continue
 
