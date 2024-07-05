@@ -95,7 +95,7 @@ def load_plugins(app):
         if name.startswith("flaskshop"):
             app.pluggy.register(module)
 
-    app.pluggy.load_setuptools_entrypoints("flaskshop_plugins", name="flaskshop_plugins")
+    app.pluggy.load_setuptools_entrypoints("flaskshop_plugins",  group="flaskshop_plugins", name="flaskshop_plugins")
     try:
         with app.app_context():
             for name in app.pluggy.external_plugins:
