@@ -14,7 +14,7 @@ class FlaskshopPluginManager(pluggy.PluginManager):
         self.external_plugins = set()
         self.plugin_metadata = {}
 
-    def load_setuptools_entrypoints(self, group: str, name: str | None = None) -> int:
+    def load_setuptools_entrypoints(self, group: str, name: str ) -> int:
         """Load modules from querying the specified setuptools entrypoint name.
         Return the number of loaded plugins."""
         logger.info(f"Loading plugins under entrypoint {group}")
